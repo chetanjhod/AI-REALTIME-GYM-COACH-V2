@@ -1,0 +1,317 @@
+/* ============================================================
+   APNA AI GYM COACH — GLOBAL DARK THEME
+   ============================================================ */
+
+:root {
+    color-scheme: dark;
+    --app-bg: #0A0D14;
+    --sidebar-bg: #111520;
+    --card-bg: #181D2A;
+    --input-bg: #181D2A;
+    --border-color: #39445A;
+    --text-color: #FFFFFF;
+    --muted-text: #B8C1D1;
+    --accent-color: #00BFFF;
+}
+
+/* ============================================================
+   GLOBAL BACKGROUND
+   ============================================================ */
+
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stHeader"] {
+    background-color: var(--app-bg) !important;
+    color: var(--text-color) !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: var(--app-bg) !important;
+}
+
+[data-testid="stMainBlockContainer"] {
+    background-color: transparent !important;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div,
+[data-testid="stSidebarContent"] {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--text-color) !important;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: var(--border-color) !important;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+html,
+body,
+.stApp,
+.block-container,
+[data-testid="stSidebar"],
+button,
+input,
+textarea,
+select {
+    font-family: "AdobeClean", Arial, sans-serif !important;
+}
+
+[data-testid="stMarkdownContainer"],
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3,
+[data-testid="stSidebar"] label,
+[data-testid="stCaptionContainer"] {
+    color: var(--text-color);
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--muted-text) !important;
+}
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+[data-testid="stButton"] button,
+[data-testid="stDownloadButton"] button,
+[data-testid="stFormSubmitButton"] button {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0 !important;
+    font-family: "AdobeClean", Arial, sans-serif !important;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+[data-testid="stButton"] button:hover,
+[data-testid="stDownloadButton"] button:hover,
+[data-testid="stFormSubmitButton"] button:hover {
+    background-color: #252D40 !important;
+    border-color: var(--accent-color) !important;
+    color: #FFFFFF !important;
+}
+
+[data-testid="stButton"] button:focus,
+[data-testid="stDownloadButton"] button:focus {
+    outline: 2px solid var(--accent-color) !important;
+    outline-offset: 2px;
+}
+
+/* ============================================================
+   SELECTBOX / DROPDOWN
+   ============================================================ */
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+    border-radius: 0 !important;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] * {
+    color: var(--text-color) !important;
+}
+
+[data-baseweb="popover"],
+[data-baseweb="menu"] {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0 !important;
+}
+
+[data-baseweb="menu"] [role="option"] {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+}
+
+[data-baseweb="menu"] [role="option"]:hover {
+    background-color: #252D40 !important;
+}
+
+/* ============================================================
+   NUMBER INPUT
+   ============================================================ */
+
+[data-testid="stNumberInput"] > div {
+    background-color: var(--input-bg) !important;
+    border-radius: 0 !important;
+}
+
+[data-testid="stNumberInput"] input {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+    border-radius: 0 !important;
+}
+
+[data-testid="stNumberInput"] button {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+    border-radius: 0 !important;
+}
+
+/* ============================================================
+   TEXT INPUTS / TEXTAREA
+   ============================================================ */
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--muted-text) !important;
+    opacity: 1;
+}
+
+/* ============================================================
+   METRICS
+   ============================================================ */
+
+[data-testid="stMetric"] {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 0 !important;
+    padding: 1rem 1.2rem !important;
+}
+
+[data-testid="stMetricLabel"],
+[data-testid="stMetricValue"],
+[data-testid="stMetricDelta"] {
+    color: var(--text-color) !important;
+}
+
+[data-testid="stMetricLabel"] {
+    opacity: 0.75;
+    font-size: 15px !important;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+}
+
+/* ============================================================
+   CARDS / FORMS / EXPANDERS
+   ============================================================ */
+
+[data-testid="stForm"],
+[data-testid="stExpander"],
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border-radius: 0 !important;
+}
+
+[data-testid="stForm"] {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 1.5rem 1rem !important;
+}
+
+[data-testid="stExpander"] {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* ============================================================
+   ALERTS / COACH FEEDBACK
+   ============================================================ */
+
+[data-testid="stAlert"] {
+    border-radius: 0 !important;
+}
+
+[data-testid="stAlert"] p {
+    color: var(--text-color) !important;
+}
+
+/* ============================================================
+   TABLES / DATAFRAMES
+   ============================================================ */
+
+[data-testid="stTable"],
+[data-testid="stDataFrame"] {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--text-color) !important;
+    border-radius: 0 !important;
+}
+
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+a {
+    color: var(--accent-color) !important;
+}
+
+a:hover {
+    color: #66D9FF !important;
+}
+
+/* ============================================================
+   DIVIDERS
+   ============================================================ */
+
+hr {
+    border-color: var(--border-color) !important;
+}
+
+/* ============================================================
+   AUDIO PLAYER
+   ============================================================ */
+
+[data-testid="stAudio"] {
+    border-radius: 0 !important;
+}
+
+/* ============================================================
+   FOCUS / ACCESSIBILITY
+   ============================================================ */
+
+*:focus-visible {
+    outline-color: var(--accent-color);
+}
+
+/* ============================================================
+   RESPONSIVE LAYOUT
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
